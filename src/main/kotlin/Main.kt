@@ -82,9 +82,19 @@ fun main() {
     Quiz().apply {
         printQuiz()
     }
-    val rockPlanets = arrayOf<String>("Mercury", "Venus", "Earth", "Mars")
-    val gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
-    val solarSystem = rockPlanets + gasPlanets
-    solarSystem[3] = "Little Earth"
+    val solarSystem = listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
     println(solarSystem[3])
+    println(solarSystem.get(3))
+    println(solarSystem.indexOf("Earth"))
+    for(planet in solarSystem) {
+        println(planet)
+    }
+    val solarSystem1 = mutableListOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    solarSystem1.add("Pluto")
+    solarSystem1.add(3, "Theia")
+    solarSystem1[3] = "Future Moon"
+    println(solarSystem1[3])
+    println(solarSystem1[9])
+    println(solarSystem1.contains("Pluto"))
+    println("Future Moon" in solarSystem1)
 }
