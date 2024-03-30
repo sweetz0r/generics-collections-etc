@@ -82,4 +82,9 @@ fun main() {
     Quiz().apply {
         printQuiz()
     }
+    val rockPlanets = arrayOf<String>("Mercury", "Venus", "Earth", "Mars")
+    val gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
+    val solarSystem = rockPlanets + gasPlanets
+    solarSystem[3] = "Little Earth"
+    println(solarSystem[3])
 }
