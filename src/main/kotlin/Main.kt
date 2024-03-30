@@ -82,6 +82,7 @@ fun main() {
     Quiz().apply {
         printQuiz()
     }
+    println("perehod k List")
     val solarSystem = listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
     println(solarSystem[3])
     println(solarSystem.get(3))
@@ -89,6 +90,7 @@ fun main() {
     for(planet in solarSystem) {
         println(planet)
     }
+    println("perehod k MutableList")
     val solarSystem1 = mutableListOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
     solarSystem1.add("Pluto")
     solarSystem1.add(3, "Theia")
@@ -97,4 +99,26 @@ fun main() {
     println(solarSystem1[9])
     println(solarSystem1.contains("Pluto"))
     println("Future Moon" in solarSystem1)
+    println("perehod k Set")
+    val solarSystem2 = mutableSetOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    println(solarSystem2.size)
+    solarSystem2.add("Pluto")
+    println(solarSystem2.size)
+    println(solarSystem2.contains("Pluto"))
+    println("perehod k Map")
+    val solarSystem3 = mutableMapOf(
+        "Mercury" to 0,
+        "Venus" to 0,
+        "Earth" to 1,
+        "Mars" to 2,
+        "Jupiter" to 79,
+        "Saturn" to 82,
+        "Uranus" to 27,
+        "Neptune" to 14
+    )
+    println(solarSystem3.size)
+    solarSystem3["Pluto"] = 5
+    println(solarSystem3.size)
+    println(solarSystem3["Pluto"]) //get value of key "Pluto"
+
 }
